@@ -7,6 +7,15 @@ def sample_responses(input_text):
     greeting = ['hello','hi','sup','I\'m back']
     response = ['fine','good','well']
 
+
+    for word in greeting:
+        if word in user_message:
+            return "Hey! How're you doing?"
+
+    for word in response:
+        if word in user_message:
+            return "That's awesome!"
+
     if 'who' and 'you?' in user_message:
         return "I'm the UGCSD bot!"  
         
@@ -18,16 +27,5 @@ def sample_responses(input_text):
         date_time = now.strftime("%d/%m/%y, %H:%M:%S") 
 
         return str(date_time)
-        
-        
-    
-    for word in greeting:
-        if word in user_message:
-            return "Hey! How're you doing?"
-
-    for word in response:
-        if word in user_message:
-            return "That's awesome!"
-    
 
     return "I don't understand you."    
